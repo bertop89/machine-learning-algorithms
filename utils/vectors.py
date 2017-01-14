@@ -14,6 +14,10 @@ def vector_subtract(v, w):
      return [v_i - w_i
      for v_i, w_i in zip(v, w)]
 
+def vector_add(v, w):
+    """adds two vectors componentwise"""
+    return [v_i + w_i for v_i, w_i in zip(v,w)]
+
 def squared_distance(v, w):
      """(v_1 - w_1) ** 2 + ... + (v_n - w_n) ** 2"""
      return sum_of_squares(vector_subtract(v, w))

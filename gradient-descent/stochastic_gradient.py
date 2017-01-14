@@ -45,10 +45,12 @@ def minimize_stochastic(target_fn, gradient_fn, x, y, theta_0, alpha_0=0.01):
          # and take a gradient step for each of the data points
          for x_i, y_i in in_random_order(data):
              gradient_i = gradient_fn(x_i, y_i, theta)
-             theta = vector_subtract(theta, scalar_multiply(alpha, [gradient_i]))
+             theta = vector_subtract(theta, scalar_multiply(alpha, gradient_i))
      return min_theta
      
-x = [random.randint(-3,3) for i in range(10)]
-y = [random.randint(-3,3) for i in range(10)]
-
-minimize_stochastic(my_fun, my_grad_fun, x, y, [0,1,0])
+if __name__ == "__main__":
+    
+    x = [random.randint(-3,3) for i in range(10)]
+    y = [random.randint(-3,3) for i in range(10)]
+    
+    minimize_stochastic(my_fun, my_grad_fun, x, y, [0,1,0])
