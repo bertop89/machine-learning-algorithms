@@ -1,3 +1,5 @@
+import math
+from vectors import sum_of_squares, dot
 
 # this isn't right if you don't from __future__ import division
 def mean(x): 
