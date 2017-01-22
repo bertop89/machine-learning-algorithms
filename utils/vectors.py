@@ -13,9 +13,8 @@ def magnitude(v):
     return math.sqrt(sum_of_squares(v))
 
 def vector_subtract(v, w):
-     """subtracts corresponding elements"""
-     return [v_i - w_i
-     for v_i, w_i in zip(v, w)]
+     """subtracts two vectors componentwise"""
+     return [v_i - w_i for v_i, w_i in zip(v,w)]
 
 def vector_add(v, w):
     """adds two vectors componentwise"""
